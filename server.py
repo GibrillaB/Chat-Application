@@ -1,6 +1,6 @@
 import socket
 import threading
-from agents import EnvironmentalAgent, TechnologyAgent
+from agents import AIEnvironmentalAgent, AITechnologyAgent
 host = '127.0.0.1'
 port = 55555
 
@@ -9,8 +9,9 @@ server.bind((host, port))
 server.listen()
 
 clients = []
-env_agent = EnvironmentalAgent()
-tech_agent = TechnologyAgent()
+# create AI agents
+env_agent = AIEnvironmentalAgent()
+tech_agent = AITechnologyAgent()
 
 print("Server is running...")
 
